@@ -118,7 +118,12 @@ function Footer() {
 
         {/* BOTTOM LINE */}
         <div className="mt-12 border-t border-white/10 pt-8 text-center text-gray-400">
-          <p>© 2026 Double A Insurance. All rights reserved.</p>
+         <p>
+            &copy; {new Date().getFullYear()} Double A Insurance<sup>LLC</sup>. All rights reserved. 
+            | Made by <a href="https://redlinelabs.vercel.app/" target="_blank" rel="noopener noreferrer">
+              <em>Derrick Widner</em>
+            </a>
+          </p>
         </div>
 
       </div>
