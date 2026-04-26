@@ -1,0 +1,192 @@
+import { useState } from "react";
+import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
+
+function ContactForm() {
+  const [form, setForm] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    insuranceType: "",
+    message: "",
+  });
+
+  const [status, setStatus] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setStatus("");
+
+    try {
+      const res = await fetch("http://localhost:5000/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        setStatus(data.error || "Something went wrong.");
+        return;
+      }
+
+      setStatus("Quote request sent successfully.");
+
+      setForm({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        insuranceType: "",
+        message: "",
+      });
+    } catch (error) {
+      setStatus("Could not connect to the server.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
+    <section id="contact" className="bg-gray-100 px-6 py-24">
+      <div className="mx-auto grid max-w-6xl gap-14 md:grid-cols-2">
+        <div>
+          <h2 className="text-4xl font-bold tracking-tight text-gray-950">
+            Get in Touch
+          </h2>
+
+          <p className="mt-5 max-w-xl leading-relaxed text-gray-500">
+            Ready to protect what matters most? Contact us today for a free quote
+            or to learn more about our services.
+          </p>
+
+          <div className="mt-10 space-y-7">
+            <div className="flex gap-4">
+              <FiPhone className="mt-1 text-2xl text-gray-950" />
+              <div>
+                <p className="font-bold text-gray-950">Phone</p>
+                <p className="mt-2 text-gray-500">1(270) 298-8100</p>
+              </div>
+            </div>
+
+            <div className="flex gap-4">
+              <FiMail className="mt-1 text-2xl text-gray-950" />
+              <div>
+                <p className="font-bold text-gray-950">Email</p>
+                <p className="mt-2 text-gray-500">info@doubleainsurance.com</p>
+              </div>
+            </div>
+
+            <div className="flex gap-4">
+              <FiMapPin className="mt-1 text-2xl text-gray-950" />
+              <div>
+                <p className="font-bold text-gray-950">Address</p>
+                <p className="mt-2 text-gray-500">
+                  106 S Main St,<br />
+                  Morgantown, Kentucky<br />
+                  42261
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="rounded-2xl bg-white p-8 shadow-sm">
+          <h3 className="text-xl font-bold text-gray-950">Request a Quote</h3>
+
+          <form onSubmit={handleSubmit} className="mt-7 grid gap-4">
+            <div className="grid gap-4 md:grid-cols-2">
+              <input
+                name="firstName"
+                value={form.firstName}
+                onChange={handleChange}
+                placeholder="First Name"
+                className="rounded-lg border border-gray-300 bg-gray-50 p-3 outline-none focus:border-gray-950"
+                required
+              />
+
+              <input
+                name="lastName"
+                value={form.lastName}
+                onChange={handleChange}
+                placeholder="Last Name"
+                className="rounded-lg border border-gray-300 bg-gray-50 p-3 outline-none focus:border-gray-950"
+                required
+              />
+            </div>
+
+            <input
+              name="email"
+              value={form.email}
+              onChange={handleChange}
+              placeholder="Email"
+              type="email"
+              className="rounded-lg border border-gray-300 bg-gray-50 p-3 outline-none focus:border-gray-950"
+              required
+            />
+
+            <input
+              name="phone"
+              value={form.phone}
+              onChange={handleChange}
+              placeholder="Phone"
+              className="rounded-lg border border-gray-300 bg-gray-50 p-3 outline-none focus:border-gray-950"
+              required
+            />
+
+            <select
+              name="insuranceType"
+              value={form.insuranceType}
+              onChange={handleChange}
+              className="rounded-lg border border-gray-300 bg-gray-50 p-3 outline-none focus:border-gray-950"
+              required
+            >
+              <option value="">Select Insurance Type</option>
+              <option value="Auto Insurance">Auto Insurance</option>
+              <option value="Home Insurance">Home Insurance</option>
+              <option value="Health Insurance">Health Insurance</option>
+              <option value="Life Insurance">Life Insurance</option>
+              <option value="Business Insurance">Business Insurance</option>
+              <option value="Group Plans">Group Plans</option>
+            </select>
+
+            <textarea
+              name="message"
+              value={form.message}
+              onChange={handleChange}
+              placeholder="Tell us about your insurance needs..."
+              rows="5"
+              className="rounded-lg border border-gray-300 bg-gray-50 p-3 outline-none focus:border-gray-950"
+            />
+
+            <button
+              type="submit"
+              disabled={loading}
+              className="rounded-lg bg-[#050514] px-6 py-3 font-semibold text-white transition hover:bg-black disabled:opacity-60"
+            >
+              {loading ? "Sending..." : "Submit Request"}
+            </button>
+
+            {status && (
+              <p className="text-sm font-medium text-gray-900">{status}</p>
+            )}
+          </form>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default ContactForm;
