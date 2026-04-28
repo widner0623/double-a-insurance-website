@@ -154,8 +154,8 @@ function ContactForm() {
               required
             >
               <option value="" disabled>Select Insurance Type</option>
-              <option value="Auto Insurance">Auto Insurance</option>
-              <option value="Home Insurance">Home Insurance</option>
+              <option value="Auto Insurance">Auto & Home Insurance</option>
+              <option value="Home Insurance">Medicare Options</option>
               <option value="Health Insurance">Health Insurance</option>
               <option value="Life Insurance">Life Insurance</option>
               <option value="Business Insurance">Business Insurance</option>

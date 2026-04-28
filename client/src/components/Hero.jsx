@@ -24,7 +24,7 @@ function Hero() {
       id="home"
       className="min-h-[720px] bg-[#000] px-6 py-24 text-white md:py-32"
     >
-      <div className="mx-auto grid max-w-6xl items-center gap-14 md:grid-cols-2">
+      <div className="mx-auto grid max-w-6xl items-center gap-14 md:grid-cols-2 ">
         {/* LEFT CONTENT */}
         <div>
           <h1 className="max-w-xl text-5xl font-bold leading-tight tracking-tight md:text-6xl">

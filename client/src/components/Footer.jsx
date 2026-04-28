@@ -108,12 +108,12 @@ function Footer() {
                 </a>
               </li>
                <li>
-                <a href="../public/TermsOfUse.pdf" target="_blank"  rel="noopener noreferrer" className="transition hover:text-white">
+                <a href="../assets/TermsOfUse.pdf" target="_blank"  rel="noopener noreferrer" className="transition hover:text-white">
                   Terms of Use
                 </a>
               </li>
               <li>
-                <a href="../public/PrivacyPolicy.pdf" target="_blank"  rel="noopener noreferrer" className="transition hover:text-white">
+                <a href="../assets/PrivacyPolicy.pdf" target="_blank"  rel="noopener noreferrer" className="transition hover:text-white">
                   Privacy Policy
                 </a>
               </li>
