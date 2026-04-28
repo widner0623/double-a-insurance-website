@@ -2,7 +2,7 @@ import { FiShield } from "react-icons/fi";
 
 function Footer() {
   return (
-    <footer className="bg-[#050514] px-6 py-14 text-white">
+    <footer className="bg-[#000] px-6 py-14 text-white">
       <div className="mx-auto max-w-6xl">
         
         <div className="grid gap-10 md:grid-cols-4">
@@ -124,7 +124,7 @@ function Footer() {
         {/* BOTTOM LINE */}
         <div className="mt-12 border-t border-white/10 pt-8 text-center text-gray-400">
          <p>
-            &copy; {new Date().getFullYear()} Double A Insurance<sup>LLC</sup>. All rights reserved. 
+            &copy; {new Date().getFullYear()} Double A Insurance Agency<sup>LLC</sup>. All rights reserved. 
             | Made by <a href="https://redlinelabs.vercel.app/" target="_blank" rel="noopener noreferrer">
               <em>Derrick Widner</em>
             </a>

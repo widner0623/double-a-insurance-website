@@ -6,7 +6,7 @@ function Team() {
       name: "Angela Embry",
       title: "CEO / Insurance Agent",
       specialty: "Health & Life Insurance",
-      bio: "With 12 years in the industry, Angela specializes in finding the perfect coverage for families and homeowners.",
+      bio: "With 20+ years of experience in the industry, Angela is passionate about helping people feel confident in their coverage decisions. She specializes in matching individuals and businesses with plans that truly fit their needs, making the process simple, stress-free, and tailored to each client.",
       email: "doubleainsurance@yahoo.com",
       phone: "(270) 202-0347",
       image:
@@ -16,7 +16,7 @@ function Team() {
       name: "Amie Watkins",
       title: "CEO / Insurance Agent",
       specialty: "Health & Life Insurance",
-      bio: "Amie helps small businesses and entrepreneurs protect their ventures with comprehensive commercial insurance solutions.",
+      bio: "Amie brings over 10 years of experience in the insurance industry, specializing in helping clients find the right coverage to fit their unique needs. Whether working with individuals or exployer groups, she is dedicated to providing personalized solutions, clear guidance, and reliable support every step of the way.",
       email: "doubleainsurance@yahoo.com",
       phone: "(270) 202-1101",
       image:

@@ -22,7 +22,7 @@ function Navbar() {
           </div>
 
           <span className="text-xl font-semibold tracking-tight text-gray-950 sm:text-2xl">
-            Double A Insurance
+            Double A Insurance Agency<sup>LLC</sup>
           </span>
         </a>
 

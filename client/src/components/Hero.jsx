@@ -22,7 +22,7 @@ function Hero() {
   return (
     <section
       id="home"
-      className="min-h-[720px] bg-[#11111d] px-6 py-24 text-white md:py-32"
+      className="min-h-[720px] bg-[#000] px-6 py-24 text-white md:py-32"
     >
       <div className="mx-auto grid max-w-6xl items-center gap-14 md:grid-cols-2">
         {/* LEFT CONTENT */}

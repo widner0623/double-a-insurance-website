@@ -55,7 +55,7 @@ function About() {
           </div>
         </div>
 
-        <div className="rounded-2xl bg-[#050514] p-10 text-white md:p-14">
+        <div className="rounded-2xl bg-[#000] p-10 text-white md:p-14">
           <div className="space-y-10">
             {stats.map((stat) => (
               <div key={stat.label}>
