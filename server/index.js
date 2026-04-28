@@ -62,7 +62,7 @@ app.post("/api/contact", async (req, res) => {
 
     /* Email Setup */
     const transporter = nodemailer.createTransport({
-      service: "smtp.mail.yahoo.com",
+      host: "smtp.mail.yahoo.com",
       port: 465,
       secure: true,
       auth: {
@@ -72,23 +72,108 @@ app.post("/api/contact", async (req, res) => {
     });
 
     /* Send Email */
+  try {
     await transporter.sendMail({
       from: `"Double A Insurance" <${process.env.EMAIL_USER}>`,
       to: process.env.EMAIL_TO,
       replyTo: email,
       subject: "New Quote Request - Double A Insurance",
       html: `
-        <h2>New Quote Request</h2>
-        <p><strong>Name:</strong> ${firstName} ${lastName}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone}</p>
-        <p><strong>Insurance Type:</strong> ${insuranceType}</p>
-        <p><strong>Message:</strong> ${message}</p>
+        <div style="font-family: Arial, sans-serif; background-color: #f3f4f6; padding: 30px;">
+          <div style="max-width: 600px; margin: auto; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+            
+            <!-- Header -->
+            <div style="background-color: #050514; color: white; padding: 20px 24px;">
+              <h2 style="margin: 0; font-size: 20px;">Double A Insurance</h2>
+              <p style="margin: 4px 0 0; font-size: 14px; opacity: 0.8;">
+                New Quote Request
+              </p>
+            </div>
+
+            <!-- Content -->
+            <div style="padding: 24px;">
+              <p style="margin-bottom: 20px; color: #111;">
+                You have received a new quote request from your website.
+              </p>
+
+              <div style="margin-bottom: 16px;">
+                <strong>Name:</strong><br/>
+                ${firstName} ${lastName}
+              </div>
+
+              <div style="margin-bottom: 16px;">
+                <strong>Email:</strong><br/>
+                <a href="mailto:${email}" style="color: #050514;">${email}</a>
+              </div>
+
+              <div style="margin-bottom: 16px;">
+                <strong>Phone:</strong><br/>
+                <a href="tel:${phone}" style="color: #050514;">${phone}</a>
+              </div>
+
+              <div style="margin-bottom: 16px;">
+                <strong>Insurance Type:</strong><br/>
+                ${insuranceType}
+              </div>
+
+              ${
+                message
+                  ? `
+              <div style="margin-top: 20px;">
+                <strong>Message:</strong>
+                <div style="margin-top: 8px; padding: 12px; background: #f9fafb; border-radius: 8px; color: #333;">
+                  ${message}
+                </div>
+              </div>`
+                  : ""
+              }
+            </div>
+
+            <!-- Footer -->
+            <div style="padding: 16px 24px; background: #f9fafb; font-size: 12px; color: #777;">
+              &copy; ${new Date().getFullYear()} Double A Insurance
+            </div>
+
+          </div>
+        </div>
       `,
     });
+    await transporter.sendMail({
+        from: `"Double A Insurance" <${process.env.EMAIL_USER}>`,
+        to: email, // 👈 send to customer
+        subject: "We Received Your Request - Double A Insurance",
+        html: `
+          <div style="font-family: Arial, sans-serif; padding: 30px; background: #f3f4f6;">
+            <div style="max-width: 600px; margin: auto; background: white; border-radius: 12px; padding: 24px;">
+              
+              <h2 style="color: #050514;">Thank You, ${firstName}!</h2>
+
+              <p style="margin-top: 12px;">
+                We’ve received your request and a member of our team will reach out shortly.
+              </p>
+
+              <div style="margin-top: 20px; padding: 12px; background: #f9fafb; border-radius: 8px;">
+                <strong>Request Type:</strong> ${insuranceType}
+              </div>
+
+              <p style="margin-top: 20px;">
+                If you need immediate assistance, feel free to call us.
+              </p>
+
+              <p style="margin-top: 30px; font-size: 14px; color: #777;">
+                Double A Insurance
+              </p>
+
+            </div>
+          </div>
+        `,
+      });
+  } catch (emailError) {
+    console.error("Email error:", emailError);
+  }
 
     res.status(201).json({
-      message: "Lead saved and email sent successfully.",
+      message: "Request submitted successfully.",
       lead: newLead,
     });
   } catch (error) {

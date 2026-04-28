@@ -42,7 +42,7 @@ function ContactForm() {
         return;
       }
 
-      setStatus("Quote request sent successfully.");
+      setStatus(data.message || "Request submitted successfully.");
 
       setForm({
         firstName: "",
@@ -153,7 +153,7 @@ function ContactForm() {
               className="rounded-lg border border-gray-300 bg-gray-50 p-3 outline-none focus:border-gray-950"
               required
             >
-              <option value="" disabled selected>Select Insurance Type</option>
+              <option value="" disabled>Select Insurance Type</option>
               <option value="Auto Insurance">Auto Insurance</option>
               <option value="Home Insurance">Home Insurance</option>
               <option value="Health Insurance">Health Insurance</option>

@@ -17,6 +17,8 @@ const leadSchema = new mongoose.Schema(
       required: true,
       trim: true,
       lowercase: true,
+      index: true,
+      match: [/^\S+@\S+\.\S+$/, "Please use a valid email address"],
     },
     phone: {
       type: String,
@@ -34,6 +36,7 @@ const leadSchema = new mongoose.Schema(
     },
     status: {
       type: String,
+      enum: ["new", "contacted", "closed"],
       default: "new",
     },
   },
