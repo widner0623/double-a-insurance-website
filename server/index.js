@@ -13,7 +13,8 @@ const app = express();
 /* Middleware */
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: process.env.CLIENT_URL,
+    credentials: true,
   })
 );
 
@@ -61,7 +62,9 @@ app.post("/api/contact", async (req, res) => {
 
     /* Email Setup */
     const transporter = nodemailer.createTransport({
-      service: "gmail",
+      service: "smtp.mail.yahoo.com",
+      port: 465,
+      secure: true,
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
@@ -70,8 +73,9 @@ app.post("/api/contact", async (req, res) => {
 
     /* Send Email */
     await transporter.sendMail({
-      from: process.env.EMAIL_USER,
+      from: `"Double A Insurance" <${process.env.EMAIL_USER}>`,
       to: process.env.EMAIL_TO,
+      replyTo: email,
       subject: "New Quote Request - Double A Insurance",
       html: `
         <h2>New Quote Request</h2>
