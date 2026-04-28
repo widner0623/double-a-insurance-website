@@ -129,7 +129,7 @@ app.post("/api/contact", async (req, res) => {
 
             <!-- Footer -->
             <div style="padding: 16px 24px; background: #f9fafb; font-size: 12px; color: #777;">
-              &copy; ${new Date().getFullYear()} Double A Insurance
+              &copy; ${new Date().getFullYear()} Double A Insurance Agency<sup>LLC</sup>
             </div>
 
           </div>
@@ -159,7 +159,7 @@ app.post("/api/contact", async (req, res) => {
               </p>
 
               <p style="margin-top: 30px; font-size: 14px; color: #777;">
-                Double A Insurance
+                Double A Insurance Agency<sup>LLC</sup>
               </p>
 
             </div>
