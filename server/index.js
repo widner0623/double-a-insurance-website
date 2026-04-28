@@ -62,9 +62,7 @@ app.post("/api/contact", async (req, res) => {
 
     /* Email Setup */
     const transporter = nodemailer.createTransport({
-      host: "smtp.mail.yahoo.com",
-      port: 465,
-      secure: true,
+      source: "gmail",
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
