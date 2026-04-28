@@ -85,7 +85,7 @@ function ContactForm() {
               <FiMail className="mt-1 text-2xl text-gray-950" />
               <div>
                 <p className="font-bold text-gray-950">Email</p>
-                <p className="mt-2 text-gray-500">info@doubleainsurance.com</p>
+                <p className="mt-2 text-gray-500">doubleainsurance@yahoo.com</p>
               </div>
             </div>
 
@@ -153,7 +153,7 @@ function ContactForm() {
               className="rounded-lg border border-gray-300 bg-gray-50 p-3 outline-none focus:border-gray-950"
               required
             >
-              <option value="">Select Insurance Type</option>
+              <option value="" disabled selected>Select Insurance Type</option>
               <option value="Auto Insurance">Auto Insurance</option>
               <option value="Home Insurance">Home Insurance</option>
               <option value="Health Insurance">Health Insurance</option>

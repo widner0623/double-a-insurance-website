@@ -58,7 +58,7 @@ function Hero() {
           {cards.map((card, index) => (
             <div
               key={index}
-              className="rounded-2xl bg-white/10 p-8 shadow-lg backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:bg-white/15"
+              className="rounded-2xl bg-white/10 p-8 shadow-lg backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:bg-white/15 cursor-default"
             >
               <div className="mb-6 text-5xl text-white">{card.icon}</div>
 

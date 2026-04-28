@@ -4,23 +4,23 @@ function Testimonials() {
   const reviews = [
     {
       text: "Double A Insurance made the claims process so easy after the storm damage. They were responsive, professional, and got everything handled quickly.",
-      name: "Sarah Johnson",
-      role: "Homeowner",
+      name: "Deniese Cannon",
+      role: "Health Insurance Client",
     },
     {
-      text: "Their business insurance package saved my company. When we had a liability claim, they handled everything professionally and efficiently.",
-      name: "Michael Chen",
-      role: "Business Owner",
+      text: "Amie saved me so much time and stress when I had a mishap with my health insurance coverage. She is truly a blessing!!",
+      name: "JD Davis",
+      role: "Health Insurance Client",
     },
     {
-      text: "Best insurance company I’ve worked with. Great rates, excellent customer service, and they actually care about their clients.",
-      name: "Emily Rodriguez",
-      role: "Auto Insurance Client",
+      text: "We met with Angela today. She went above and beyond to give us such great information so we could decide what would be the best for us. The time she spent with us I honestly cannot imagine another insurance office spending the time that she did today . She came highly, recommended to us and we are so glad we went !! Very sweet lady. Highly recommend her also.",
+      name: "Melissa Forgy",
+      role: "New Client",
     },
   ];
 
   return (
-    <section className="bg-gray-100 px-6 py-24">
+    <section id="reviews" className="bg-gray-100 px-6 py-24">
       <div className="mx-auto max-w-6xl">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-4xl font-bold text-gray-950">

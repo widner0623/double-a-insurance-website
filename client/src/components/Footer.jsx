@@ -17,7 +17,7 @@ function Footer() {
             </div>
 
             <p className="mt-5 max-w-xs leading-relaxed text-gray-400">
-              Your trusted insurance partner since 2021.
+              Your trusted insurance partner since 2023.
             </p>
           </div>
 
@@ -26,14 +26,9 @@ function Footer() {
             <h4 className="font-semibold">Products</h4>
 
             <ul className="mt-5 space-y-3 text-gray-400">
-              <li>
+               <li>
                 <a href="#services" className="transition hover:text-white">
-                  Auto Insurance
-                </a>
-              </li>
-              <li>
-                <a href="#services" className="transition hover:text-white">
-                  Home Insurance
+                  Life Insurance
                 </a>
               </li>
               <li>
@@ -43,7 +38,12 @@ function Footer() {
               </li>
               <li>
                 <a href="#services" className="transition hover:text-white">
-                  Life Insurance
+                  Auto Insurance
+                </a>
+              </li>
+              <li>
+                <a href="#services" className="transition hover:text-white">
+                  Home Insurance
                 </a>
               </li>
             </ul>
@@ -107,8 +107,13 @@ function Footer() {
                   Contact Us
                 </a>
               </li>
+               <li>
+                <a href="../public/TermsOfUse.pdf" target="_blank"  rel="noopener noreferrer" className="transition hover:text-white">
+                  Terms of Use
+                </a>
+              </li>
               <li>
-                <a href="#" className="transition hover:text-white">
+                <a href="../public/PrivacyPolicy.pdf" target="_blank"  rel="noopener noreferrer" className="transition hover:text-white">
                   Privacy Policy
                 </a>
               </li>

@@ -4,21 +4,21 @@ function Team() {
   const agents = [
     {
       name: "Angela Embry",
-      title: "Senior Insurance Agent",
-      specialty: "Auto & Home Insurance",
-      bio: "With 12 years in the industry, Jennifer specializes in finding the perfect coverage for families and homeowners.",
-      email: "angela@doubleainsurance.com",
+      title: "CEO / Insurance Agent",
+      specialty: "Health & Life Insurance",
+      bio: "With 12 years in the industry, Angela specializes in finding the perfect coverage for families and homeowners.",
+      email: "doubleainsurance@yahoo.com",
       phone: "(270) 202-0347",
       image:
         "https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/469226622_431528980008663_6451512936600384130_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=dd6889&_nc_ohc=PK-lhuKHKyYQ7kNvwEIi_Xw&_nc_oc=AdqGAj7f4n94n_S6cQ1JQmBN3V3rVpERh_7yHnjYn7sP2nPJityqbr5fqp0QvdnNIfbDY_CQLDB8os52_mT9Y2KN&_nc_zt=23&_nc_ht=scontent-lga3-1.xx&_nc_gid=TYBkbj-uKLjspsvMPC_zuA&_nc_ss=7b2a8&oh=00_Af21aAxoECDjYrCTiPXyz1eMWBT-zgFMKTBi-OJ1CvQfIg&oe=69F40AA5",
     },
     {
       name: "Amie Watkins",
-      title: "Insurance Agent",
-      specialty: "Business & Commercial",
+      title: "CEO / Insurance Agent",
+      specialty: "Health & Life Insurance",
       bio: "Amie helps small businesses and entrepreneurs protect their ventures with comprehensive commercial insurance solutions.",
-      email: "amie@doubleainsurance.com",
-      phone: "(555) 234-5678",
+      email: "doubleainsurance@yahoo.com",
+      phone: "(270) 202-1101",
       image:
         "https://scontent-lga3-3.xx.fbcdn.net/v/t39.30808-6/469217119_431528920008669_5782108318087999375_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=dd6889&_nc_ohc=TUt5DwgPE_MQ7kNvwGf5C63&_nc_oc=Adpo3UPJ6c7VE3ovGlMfzZmpJbeEJAsbQ2TRpmu1usjBvHczmS9wQeTnRb6MlUIDr14PFSMpZOT4limHA0aIe2Nv&_nc_zt=23&_nc_ht=scontent-lga3-3.xx&_nc_gid=6rL_MNM456FfDq1o-RRvag&_nc_ss=7b2a8&oh=00_Af3xajWRJTWni4LMYhkdey0UfSXUyL0Y7q8Eov2vM11ElA&oe=69F40A3E",
     },

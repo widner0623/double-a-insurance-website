@@ -8,7 +8,7 @@ function Navbar() {
     { label: "Services", href: "#services" },
     { label: "About", href: "#about" },
     { label: "Our Team", href: "#team" },
-    { label: "Contact", href: "#contact" },
+    { label: "Reviews", href: "#reviews" },
   ];
 
   const closeMenu = () => setOpen(false);

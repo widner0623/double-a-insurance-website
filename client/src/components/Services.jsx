@@ -10,6 +10,16 @@ import {
 function Services() {
   const services = [
     {
+      icon: <FiHeart />,
+      title: "Health Insurance",
+      text: "Quality healthcare coverage for you and your family with extensive provider networks.",
+    },
+    {
+      icon: <FiUmbrella />,
+      title: "Life Insurance",
+      text: "Secure your family’s financial future with term and whole life insurance policies.",
+    },
+    {
       icon: <FiTruck />,
       title: "Auto Insurance",
       text: "Comprehensive coverage for your vehicle with flexible payment options and roadside assistance.",
@@ -20,20 +30,11 @@ function Services() {
       text: "Protect your home and belongings from unexpected events with customizable coverage plans.",
     },
     {
-      icon: <FiHeart />,
-      title: "Health Insurance",
-      text: "Quality healthcare coverage for you and your family with extensive provider networks.",
-    },
-    {
       icon: <FiBriefcase />,
       title: "Business Insurance",
       text: "Safeguard your business with liability, property, and workers compensation coverage.",
     },
-    {
-      icon: <FiUmbrella />,
-      title: "Life Insurance",
-      text: "Secure your family’s financial future with term and whole life insurance policies.",
-    },
+   
     {
       icon: <FiUsers />,
       title: "Group Plans",

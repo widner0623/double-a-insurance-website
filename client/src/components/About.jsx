@@ -21,9 +21,9 @@ function About() {
   ];
 
   const stats = [
-    { number: "2021", label: "Founded & Growing Strong" },
+    { number: "2023", label: "Founded & Growing Strong" },
     { number: "1,500+", label: "Satisfied Customers" },
-    { number: "95%", label: "Customer Satisfaction" },
+    { number: "98.9%", label: "Customer Satisfaction" },
     { number: "24/7", label: "Support Available" },
   ];
 
