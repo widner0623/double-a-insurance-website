@@ -82,7 +82,7 @@ app.post("/api/contact", async (req, res) => {
             
             <!-- Header -->
             <div style="background-color: #050514; color: white; padding: 20px 24px;">
-              <h2 style="margin: 0; font-size: 20px;">Double A Insurance</h2>
+              <h2 style="margin: 0; font-size: 20px;">Double A Insurance Agency<sup>LLC</sup></h2>
               <p style="margin: 4px 0 0; font-size: 14px; opacity: 0.8;">
                 New Quote Request
               </p>
