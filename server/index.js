@@ -63,7 +63,7 @@ app.post("/api/contact", async (req, res) => {
     /* Send Email */
   try {
     await resend.emails.send({
-      from: "Double A Insurance <quotes@doubleainsuranceagency.com>",
+      from: "Double A Insurance Agency LLC <quotes@doubleainsuranceagency.com>",
       to: process.env.EMAIL_TO,
       replyTo: email,
       subject: "New Quote Request - Double A Insurance",
@@ -128,7 +128,7 @@ app.post("/api/contact", async (req, res) => {
       `,
     });
     await resend.emails.send({
-        from: "Double A Insurance <quotes@doubleainsuranceagency.com>",
+        from: "Double A Insurance Agency LLC <quotes@doubleainsuranceagency.com>",
         to: email,
         subject: "We Received Your Request - Double A Insurance",
         html: `

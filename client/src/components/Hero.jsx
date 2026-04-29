@@ -27,9 +27,9 @@ function Hero() {
       <div className="mx-auto grid max-w-6xl items-center gap-14 md:grid-cols-2 ">
         {/* LEFT CONTENT */}
         <div>
-          <div className="mt-[-150px] mb-[-95px] max-w-md">
+          <div className="mt-[-100px] mb-[0px] max-w-md">
             <img
-              src="/logo.png"
+              src="/amie_angela.PNG"
               alt="Company Logo"
               className="w-full max-w-md h-auto"
             />

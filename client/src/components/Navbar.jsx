@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FiShield } from "react-icons/fi";
+import logo from "../assets/navLogo.png";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
@@ -17,13 +18,11 @@ function Navbar() {
     <header className="sticky top-0 z-50 bg-white border-b border-gray-100">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
         <a href="#home" onClick={closeMenu} className="flex items-center gap-4">
-          <div className="flex h-11 w-11 items-center justify-center rounded-full border border-gray-900">
-            <FiShield className="text-2xl text-gray-900" />
-          </div>
-
-          <span className="text-xl font-semibold tracking-tight text-gray-950 sm:text-2xl">
-            Double A Insurance Agency<sup>LLC</sup>
-          </span>
+          <img
+            src={logo}
+            alt="Double A Insurance Agency"
+            className="absolute h-50 w-auto object-contain sm:h-55 md:h-50 lg:h-50 overflow-hidden"
+          />
         </a>
 
         <div className="hidden items-center gap-10 lg:flex">
@@ -85,12 +84,14 @@ function Navbar() {
         }`}
       >
         <div className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-900">
-            <FiShield className="text-xl text-gray-900" />
-          </div>
+          
 
-          <span className="text-xl font-semibold text-gray-950">
-            Double A Insurance
+          <span className="text-xl font-semibold text-gray-950 pb-15">
+            <img
+            src={logo}
+            alt="Double A Insurance Agency"
+            className="absolute left-[0] top-[-50px] h-50 w-auto object-contain sm:h-55 overflow-hidden"
+          />
           </span>
         </div>
 

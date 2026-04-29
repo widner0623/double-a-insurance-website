@@ -1,4 +1,5 @@
 import { FiShield } from "react-icons/fi";
+import logo from "../assets/footerLogo.png"
 
 function Footer() {
   return (
@@ -9,11 +10,12 @@ function Footer() {
           
           {/* LOGO + TEXT */}
           <div>
-            <div className="flex items-center gap-3">
-              <FiShield className="text-3xl" />
-              <h3 className="text-sm font-semibold">
-                Double A Insurance Agency<sup>LLC</sup>
-              </h3>
+            <div className="flex items-center gap-3 py-8">
+              <img
+                src={logo}
+                alt="Double A Insurance Agency"
+                className="absolute h-50 w-auto object-contain sm:h-55 md:h-40 lg:h-50 overflow-hidden mb-5"
+              />
             </div>
 
             <p className="mt-5 max-w-xs leading-relaxed text-gray-400">
