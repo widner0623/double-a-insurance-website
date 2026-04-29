@@ -72,12 +72,12 @@ function Services() {
                 {service.text}
               </p>
 
-              {/* <a
+              <a
                 href="#contact"
                 className="mt-6 inline-flex items-center gap-2 font-semibold text-gray-950"
               >
                 Learn More <span>→</span>
-              </a> */}
+              </a>
             </article>
           ))}
         </div>
