@@ -36,9 +36,7 @@ function About() {
           </h2>
 
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-gray-500">
-            We’re a fresh approach to insurance, combining modern technology
-            with personalized service. Our commitment to understanding your
-            unique needs sets us apart.
+           We specialize in building long-term relationships, not just filling out forms 
           </p>
 
           <div className="mt-10 space-y-6">
