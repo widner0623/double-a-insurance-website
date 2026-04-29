@@ -31,7 +31,7 @@ function Team() {
           </h2>
 
           <p className="mt-5 text-base leading-relaxed text-gray-500">
-            Our dedicated team of insurance professionals is here to help you
+            Our dedicated team of insurance professionals are here to help you
             find the perfect coverage for your needs.
           </p>
         </div>
@@ -45,7 +45,7 @@ function Team() {
               <img
                 src={agent.image}
                 alt={agent.name}
-                className="h-[400px] w-full object-cover"
+                className="h-[450px] w-full object-cover"
               />
 
               <div className="p-8">
