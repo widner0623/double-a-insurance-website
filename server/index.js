@@ -3,10 +3,12 @@ import cors from "cors";
 import dotenv from "dotenv";
 import nodemailer from "nodemailer";
 import mongoose from "mongoose";
+import dns from "dns";
 
 import Lead from "./models/Lead.js";
 
 dotenv.config();
+dns.setDefaultResultOrder("ipv4first");
 
 const app = express();
 
