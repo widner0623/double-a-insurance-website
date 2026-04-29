@@ -45,7 +45,7 @@ function Team() {
               <img
                 src={agent.image}
                 alt={agent.name}
-                className="h-[500px] pt-16 w-full object-cover"
+                className="h-[550px] top-14 w-full object-cover"
               />
 
               <div className="p-8">
