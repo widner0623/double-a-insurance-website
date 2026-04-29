@@ -1,16 +1,13 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-import nodemailer from "nodemailer";
 import mongoose from "mongoose";
-import dns from "dns";
-import { resolve4 } from "dns/promises";
+import { Resend } from "resend";
 
 import Lead from "./models/Lead.js";
 
 dotenv.config();
-dns.setDefaultResultOrder("ipv4first");
-
+const resend = new Resend(process.env.RESEND_API_KEY)
 const app = express();
 
 /* Middleware */
@@ -63,30 +60,10 @@ app.post("/api/contact", async (req, res) => {
       message,
     });
 
-    /* Email Setup */
-   const gmailIps = await resolve4("smtp.gmail.com");
-
-  const transporter = nodemailer.createTransport({
-    host: gmailIps[0],
-    port: 587,
-    secure: false,
-    requireTLS: true,
-    tls: {
-      servername: "smtp.gmail.com",
-    },
-    auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASS,
-    },
-    connectionTimeout: 20000,
-    greetingTimeout: 20000,
-    socketTimeout: 20000,
-  });
-
     /* Send Email */
   try {
-    await transporter.sendMail({
-      from: `"Double A Insurance" <${process.env.EMAIL_USER}>`,
+    await resend.emails.send({
+      from: "Double A Insurance <onboarding@resend.dev>",
       to: process.env.EMAIL_TO,
       replyTo: email,
       subject: "New Quote Request - Double A Insurance",
@@ -150,9 +127,9 @@ app.post("/api/contact", async (req, res) => {
         </div>
       `,
     });
-    await transporter.sendMail({
-        from: `"Double A Insurance" <${process.env.EMAIL_USER}>`,
-        to: email, // 👈 send to customer
+    await resend.emails.send({
+        from: "Double A Insurance <onboarding@resend.dev>",
+        to: email,
         subject: "We Received Your Request - Double A Insurance",
         html: `
           <div style="font-family: Arial, sans-serif; padding: 30px; background: #f3f4f6;">
@@ -181,7 +158,7 @@ app.post("/api/contact", async (req, res) => {
         `,
       });
   } catch (emailError) {
-    console.error("Email error:", emailError);
+    console.error("Resend email error:", emailError);
   }
 
     res.status(201).json({
