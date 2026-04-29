@@ -32,13 +32,13 @@ function Services() {
     {
       icon: <FiBriefcase />,
       title: "Business Insurance",
-      text: "Safeguard your business with liability, property, and workers compensation coverage.",
+      text: "Safeguard your business with general liability, property, and workers compensation coverage.",
     },
    
     {
       icon: <FiUsers />,
-      title: "Employer Benefits",
-      text: "Affordable group insurance solutions for organizations of all sizes.",
+      title: "Employer Group Benefits",
+      text: "Flexible and affordable group insurance options designed for businesses of any size, even those with as few as two employees provide your team with essential benefits like health, lfie, dental, vision and disability insurance.",
     },
   ];
 
