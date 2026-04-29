@@ -12,17 +12,17 @@ function Services() {
      {
       icon: <FiShield  />,
       title: "Medicare Options",
-      text: "Find the right Medicare coverage for your lifestyle with flexible plan options, trusted providers, and personalized support.",
+      text: "Find the right Medicare coverage for you lifestyle with flexible plan options, including Medicare Supplement plans, Prescription Drug Plans, and Medicare Advantage plans.",
     },
     {
       icon: <FiHeart />,
       title: "Health Insurance",
-      text: "Quality healthcare coverage for you and your family with extensive provider networks.",
+      text: "No matter your situation - marketplace coverage, a health saving account, or a short-term plan, we'll help you find the right solution.",
     },
     {
       icon: <FiUmbrella />,
       title: "Life Insurance",
-      text: "Secure your family’s financial future with term and whole life insurance policies.",
+      text: "Help secure your family's financial future with customized solutions, including term, guaranteed universal, and whole life insurance.",
     },
     {
       icon: <FiHome />,
@@ -38,7 +38,7 @@ function Services() {
     {
       icon: <FiUsers />,
       title: "Employer Group Benefits",
-      text: "Flexible and affordable group insurance options designed for businesses of any size, even those with as few as two employees provide your team with essential benefits like health, lfie, dental, vision and disability insurance.",
+      text: "Flexible and affordable group insurance options designed for businesses of any size, even those with as few as two employees. Provide your team with essential benefits like health, lfie, dental, vision and disability insurance.",
     },
   ];
 
