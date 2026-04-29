@@ -39,8 +39,7 @@ function Hero() {
           </h1>
 
           <p className="mt-7 max-w-xl text-lg leading-relaxed text-gray-200 md:text-xl">
-             Insurance coverage tailored to your needs. From Medicare
-            to home, health to life - we’ve got you covered.
+             At Double A Insurance Agency<sup>LLC</sup>, we believe insurance is a personal business, not a digital transaction. We're an independent agency that treats you like family, focusing on taking the time to truly understand your unique needs. Whether it's home, auto, business, or Medicare, our old-school approach guarantees personal attention and service you can trust.
           </p>
 
           <div className="mt-9 flex flex-col gap-4 sm:flex-row">
