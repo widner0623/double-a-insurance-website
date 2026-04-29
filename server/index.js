@@ -11,24 +11,9 @@ dotenv.config();
 const app = express();
 
 /* Middleware */
-const allowedOrigins = [
-  "http://localhost:5173",
-  "https://doubleainsuranceagency.com",
-  "https://www.doubleainsuranceagency.com",
-  "https://double-a-insurance-website.vercel.app",
-];
-
 app.use(
   cors({
-    origin: (origin, callback) => {
-      if (!origin) return callback(null, true);
-
-      if (allowedOrigins.includes(origin) || origin.endsWith(".vercel.app")) {
-        return callback(null, true);
-      }
-
-      return callback(new Error("Not allowed by CORS"));
-    },
+    origin: process.env.CLIENT_URL,
     credentials: true,
   })
 );
