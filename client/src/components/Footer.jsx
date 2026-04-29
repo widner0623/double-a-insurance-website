@@ -127,7 +127,7 @@ function Footer() {
           </div>
         </div>
       <div className="mt-16">
-        <p className="max-w-xs leading-relaxed text-gray-600 opacity-70 inline">
+        <p className="max-w-xs leading-relaxed text-gray-500 opacity-70 inline">
           We do not offer every plan available in your area. Currently we represent 7 organizations which offer 75 products in your area. Please contact Medicare.gov, 1-800-MEDICARE, or your local State Health Insurance Program to get information on all of your options.
         </p>
       </div>
