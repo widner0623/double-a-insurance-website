@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import nodemailer from "nodemailer";
 import mongoose from "mongoose";
 import dns from "dns";
+import { resolve4 } from "dns/promises";
 
 import Lead from "./models/Lead.js";
 
@@ -63,20 +64,24 @@ app.post("/api/contact", async (req, res) => {
     });
 
     /* Email Setup */
-    const transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      port: 587,
-      secure: false,
-      requireTLS: true,
-      family: 4,
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
-      connectionTimeout: 20000,
-      greetingTimeout: 20000,
-      socketTimeout: 20000,
-    });
+   const gmailIps = await resolve4("smtp.gmail.com");
+
+  const transporter = nodemailer.createTransport({
+    host: gmailIps[0],
+    port: 587,
+    secure: false,
+    requireTLS: true,
+    tls: {
+      servername: "smtp.gmail.com",
+    },
+    auth: {
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS,
+    },
+    connectionTimeout: 20000,
+    greetingTimeout: 20000,
+    socketTimeout: 20000,
+  });
 
     /* Send Email */
   try {
