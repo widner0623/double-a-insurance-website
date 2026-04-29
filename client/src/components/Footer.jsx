@@ -11,14 +11,15 @@ function Footer() {
           <div>
             <div className="flex items-center gap-3">
               <FiShield className="text-3xl" />
-              <h3 className="text-xl font-semibold">
-                Double A Insurance
+              <h3 className="text-sm font-semibold">
+                Double A Insurance Agency<sup>LLC</sup>
               </h3>
             </div>
 
             <p className="mt-5 max-w-xs leading-relaxed text-gray-400">
               Your trusted insurance partner since 2023.
             </p>
+
           </div>
 
           {/* PRODUCTS */}
@@ -28,22 +29,27 @@ function Footer() {
             <ul className="mt-5 space-y-3 text-gray-400">
                <li>
                 <a href="#services" className="transition hover:text-white">
-                  Life Insurance
+                  Medicare Options
+                </a>
+              </li>
+               <li>
+                <a href="#services" className="transition hover:text-white">
+                  Health & Life Insurance
                 </a>
               </li>
               <li>
                 <a href="#services" className="transition hover:text-white">
-                  Health Insurance
+                  Home & Auto Insurance
                 </a>
               </li>
               <li>
                 <a href="#services" className="transition hover:text-white">
-                  Auto Insurance
+                  Business Insurance
                 </a>
               </li>
               <li>
                 <a href="#services" className="transition hover:text-white">
-                  Home Insurance
+                  Group Plans
                 </a>
               </li>
             </ul>
@@ -108,21 +114,25 @@ function Footer() {
                 </a>
               </li>
                <li>
-                <a href="../assets/TermsOfUse.pdf" target="_blank"  rel="noopener noreferrer" className="transition hover:text-white">
+                <a href="/TermsOfUse.pdf" target="_blank"  rel="noopener noreferrer" className="transition hover:text-white">
                   Terms of Use
                 </a>
               </li>
               <li>
-                <a href="../assets/PrivacyPolicy.pdf" target="_blank"  rel="noopener noreferrer" className="transition hover:text-white">
+                <a href="/PrivacyPolicy.pdf" target="_blank"  rel="noopener noreferrer" className="transition hover:text-white">
                   Privacy Policy
                 </a>
               </li>
             </ul>
           </div>
         </div>
-
+      <div className="mt-16">
+        <p className="max-w-xs leading-relaxed text-gray-600 opacity-70 inline">
+          We do not offer every plan available in your area. Currently we represent 7 organizations which offer 75 products in your area. Please contact Medicare.gov, 1-800-MEDICARE, or your local State Health Insurance Program to get information on all of your options.
+        </p>
+      </div>
         {/* BOTTOM LINE */}
-        <div className="mt-12 border-t border-white/10 pt-8 text-center text-gray-400">
+        <div className="mt-2 border-t border-white/10 pt-8 text-center text-gray-400">
          <p>
             &copy; {new Date().getFullYear()} Double A Insurance Agency<sup>LLC</sup>. All rights reserved. 
             | Made by <a href="https://redlinelabs.vercel.app/" target="_blank" rel="noopener noreferrer">

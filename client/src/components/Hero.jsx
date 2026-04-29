@@ -27,6 +27,13 @@ function Hero() {
       <div className="mx-auto grid max-w-6xl items-center gap-14 md:grid-cols-2 ">
         {/* LEFT CONTENT */}
         <div>
+          <div className="mt-[-150px] mb-[-95px] max-w-md">
+            <img
+              src="/logo.png"
+              alt="Company Logo"
+              className="w-full max-w-md h-auto"
+            />
+          </div>
           <h1 className="max-w-xl text-5xl font-bold leading-tight tracking-tight md:text-6xl">
             Protecting What Matters Most
           </h1>

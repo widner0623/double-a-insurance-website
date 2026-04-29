@@ -3,20 +3,20 @@ import { FiCheckCircle } from "react-icons/fi";
 function About() {
   const reasons = [
     {
-      title: "Fast Claims Processing",
-      text: "Average claim resolution in 48 hours",
+      title: "Care That Feels Like Family",
+      text: "Compassionate support you can trust",
     },
     {
-      title: "24/7 Customer Support",
-      text: "Always here when you need us most",
+      title: "Local Agents",
+      text: "Personalized service in your community",
     },
     {
       title: "Competitive Rates",
       text: "Quality coverage at affordable prices",
     },
     {
-      title: "Local Agents",
-      text: "Personalized service in your community",
+      title: "Fast, Reliable Service",
+      text: "Quick response times and dependable support when you need it",
     },
   ];
 

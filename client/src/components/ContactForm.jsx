@@ -14,11 +14,29 @@ function ContactForm() {
   const [status, setStatus] = useState("");
   const [loading, setLoading] = useState(false);
 
+  const formatPhone = (value) => {
+    const digits = value.replace(/\D/g, "").slice(0, 10);
+
+    if (digits.length <= 3) return digits;
+    if (digits.length <= 6)
+      return `(${digits.slice(0, 3)}) ${digits.slice(3)}`;
+    return `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6)}`;
+  };
+
   const handleChange = (e) => {
-    setForm({
-      ...form,
-      [e.target.name]: e.target.value,
-    });
+    const { name, value } = e.target;
+
+    if (name === "phone") {
+      setForm({
+        ...form,
+        phone: formatPhone(value),
+      });
+    } else {
+      setForm({
+        ...form,
+        [name]: value,
+      });
+    }
   };
 
   const handleSubmit = async (e) => {
@@ -26,13 +44,24 @@ function ContactForm() {
     setLoading(true);
     setStatus("");
 
+    const cleanPhone = form.phone.replace(/\D/g, "");
+
+    if (cleanPhone.length !== 10) {
+      setStatus("Please enter a valid 10-digit phone number.");
+      setLoading(false);
+      return;
+    }
+
     try {
       const res = await fetch(`${import.meta.env.VITE_API_URL}/api/contact`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(form),
+        body: JSON.stringify({
+          ...form,
+          phone: cleanPhone,
+        }),
       });
 
       const data = await res.json();
@@ -137,11 +166,14 @@ function ContactForm() {
               required
             />
 
-            <input
+           <input
               name="phone"
               value={form.phone}
               onChange={handleChange}
               placeholder="Phone"
+              inputMode="numeric"
+              autoComplete="tel"
+              maxLength={14}
               className="rounded-lg border border-gray-300 bg-gray-50 p-3 outline-none focus:border-gray-950"
               required
             />
@@ -154,8 +186,8 @@ function ContactForm() {
               required
             >
               <option value="" disabled>Select Insurance Type</option>
-              <option value="Auto Insurance">Auto & Home Insurance</option>
-              <option value="Home Insurance">Medicare Options</option>
+              <option value="Auto & Home Insurance">Auto & Home Insurance</option>
+              <option value="Medicare Options">Medicare Options</option>
               <option value="Health Insurance">Health Insurance</option>
               <option value="Life Insurance">Life Insurance</option>
               <option value="Business Insurance">Business Insurance</option>

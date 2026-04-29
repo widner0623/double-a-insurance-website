@@ -3,7 +3,7 @@ import { FiStar } from "react-icons/fi";
 function Testimonials() {
   const reviews = [
     {
-      text: "Double A Insurance made the claims process so easy after the storm damage. They were responsive, professional, and got everything handled quickly.",
+      text: "Amie and Angela are very compassionate and go above and beyond to explain everything to you. They help you make the right choices. They treat you like family. I'll drive and hour every time it worth it.",
       name: "Deniese Cannon",
       role: "Health Insurance Client",
     },

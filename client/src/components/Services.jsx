@@ -1,14 +1,19 @@
 import {
-  FiTruck,
   FiHome,
   FiHeart,
   FiBriefcase,
   FiUmbrella,
   FiUsers,
+  FiShield
 } from "react-icons/fi";
 
 function Services() {
   const services = [
+     {
+      icon: <FiShield  />,
+      title: "Medicare Options",
+      text: "Find the right Medicare coverage for your lifestyle with flexible plan options, trusted providers, and personalized support.",
+    },
     {
       icon: <FiHeart />,
       title: "Health Insurance",
@@ -20,14 +25,9 @@ function Services() {
       text: "Secure your family’s financial future with term and whole life insurance policies.",
     },
     {
-      icon: <FiTruck />,
-      title: "Auto Insurance",
-      text: "Comprehensive coverage for your vehicle with flexible payment options and roadside assistance.",
-    },
-    {
       icon: <FiHome />,
-      title: "Home Insurance",
-      text: "Protect your home and belongings from unexpected events with customizable coverage plans.",
+      title: "Home & Auto Insurance",
+      text: "Comprehensive coverage for your home and vehicle, including protection from unexpected events and flexible policy options.",
     },
     {
       icon: <FiBriefcase />,
