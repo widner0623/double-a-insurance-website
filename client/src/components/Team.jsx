@@ -5,7 +5,6 @@ function Team() {
     {
       name: "Angela Embry",
       title: "CEO / Insurance Agent",
-      specialty: "Health & Life Insurance",
       bio: "With 20+ years of experience in the industry, Angela is passionate about helping people feel confident in their coverage decisions. She specializes in matching individuals and businesses with plans that truly fit their needs, making the process simple, stress-free, and tailored to each client.",
       email: "doubleainsurance@yahoo.com",
       phone: "(270) 202-0347",
@@ -15,7 +14,6 @@ function Team() {
     {
       name: "Amie Watkins",
       title: "CEO / Insurance Agent",
-      specialty: "Health & Life Insurance",
       bio: "Amie brings over 10 years of experience in the insurance industry, specializing in helping clients find the right coverage to fit their unique needs. Whether working with individuals or exployer groups, she is dedicated to providing personalized solutions, clear guidance, and reliable support every step of the way.",
       email: "doubleainsurance@yahoo.com",
       phone: "(270) 202-1101",
@@ -47,7 +45,7 @@ function Team() {
               <img
                 src={agent.image}
                 alt={agent.name}
-                className="h-[380px] w-full object-cover"
+                className="h-[400px] w-full object-cover"
               />
 
               <div className="p-8">
@@ -58,8 +56,6 @@ function Team() {
                 <p className="mt-2 font-medium text-gray-800">
                   {agent.title}
                 </p>
-
-                <p className="mt-2 text-gray-500">{agent.specialty}</p>
 
                 <p className="mt-6 leading-relaxed text-gray-500">
                   {agent.bio}

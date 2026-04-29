@@ -37,7 +37,7 @@ function Services() {
    
     {
       icon: <FiUsers />,
-      title: "Group Plans",
+      title: "Employer Benefits",
       text: "Affordable group insurance solutions for organizations of all sizes.",
     },
   ];

@@ -39,7 +39,7 @@ function Hero() {
           </h1>
 
           <p className="mt-7 max-w-xl text-lg leading-relaxed text-gray-200 md:text-xl">
-            Comprehensive insurance coverage tailored to your needs. From auto
+             Insurance coverage tailored to your needs. From Medicare
             to home, health to life - we’ve got you covered.
           </p>
 
