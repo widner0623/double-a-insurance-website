@@ -36,7 +36,7 @@ function About() {
           </h2>
 
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-gray-500">
-           We specialize in building long-term relationships, not just filling out forms 
+           We specialize in building long-term relationships, not just completing applications. Every client receives the care and personalized attention they deserve, with flexible solutions tailored to their needs.
           </p>
 
           <div className="mt-10 space-y-6">
