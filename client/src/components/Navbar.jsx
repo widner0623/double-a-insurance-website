@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { FiShield } from "react-icons/fi";
 import logo from "../assets/navLogo.png";
 
 function Navbar() {

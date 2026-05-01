@@ -137,8 +137,8 @@ function Footer() {
         <div className="mt-2 border-t border-white/10 pt-8 text-center text-gray-400">
          <p>
             &copy; {new Date().getFullYear()} Double A Insurance Agency<sup>LLC</sup>. All rights reserved. 
-            | Made by <a href="https://redlinelabs.vercel.app/" target="_blank" rel="noopener noreferrer">
-              <em>Derrick Widner</em>
+            | Made by <a href="https://redline-labs.vercel.app/" target="_blank" rel="noopener noreferrer">
+              <em>Redline Labs</em>
             </a>
           </p>
         </div>
