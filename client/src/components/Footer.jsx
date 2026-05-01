@@ -138,7 +138,7 @@ function Footer() {
          <p>
             &copy; {new Date().getFullYear()} Double A Insurance Agency<sup>LLC</sup>. All rights reserved. 
             | Made by <a href="https://redline-labs.vercel.app/" target="_blank" rel="noopener noreferrer">
-              <em>Redline Labs</em>
+              <em>Redline Systems Co</em>
             </a>
           </p>
         </div>
