@@ -15,7 +15,7 @@ function Team() {
     {
       name: "Amie Watkins",
       title: "CEO / Insurance Agent",
-      bio: "Amie brings over 10 years of experience in the insurance industry, specializing in helping clients find the right coverage to fit their unique needs. Whether working with individuals or exployer groups, she is dedicated to providing personalized solutions, clear guidance, and reliable support every step of the way.",
+      bio: "Amie brings over 10 years of experience in the insurance industry, specializing in helping clients find the right coverage to fit their unique needs. Whether working with individuals or employer groups, she is dedicated to providing personalized solutions, clear guidance, and reliable support every step of the way.",
       email: "doubleainsurance@yahoo.com",
       phone: "(270) 202-1101",
       image: amieImg,

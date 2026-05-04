@@ -12,12 +12,12 @@ function Services() {
      {
       icon: <FiShield  />,
       title: "Medicare Options",
-      text: "Find the right Medicare coverage for you lifestyle with flexible plan options, including Medicare Supplement plans, Prescription Drug Plans, and Medicare Advantage plans.",
+      text: "Find the right Medicare coverage for your lifestyle with flexible plan options, including Medicare Supplement plans, Prescription Drug Plans, and Medicare Advantage plans.",
     },
     {
       icon: <FiHeart />,
       title: "Health Insurance",
-      text: "No matter your situation - marketplace coverage, a health saving account, or a short-term plan, we'll help you find the right solution.",
+      text: "No matter your situation - marketplace coverage, a health savings account, or a short-term plan, we'll help you find the right solution.",
     },
     {
       icon: <FiUmbrella />,
@@ -38,7 +38,7 @@ function Services() {
     {
       icon: <FiUsers />,
       title: "Employer Group Benefits",
-      text: "Flexible and affordable group insurance options designed for businesses of any size, even those with as few as two employees. Provide your team with essential benefits like health, lfie, dental, vision and disability insurance.",
+      text: "Flexible and affordable group insurance options designed for businesses of any size, even those with as few as two employees. Provide your team with essential benefits like health, life, dental, vision and disability insurance.",
     },
   ];
 
