@@ -12,7 +12,7 @@ function Services() {
      {
       icon: <FiShield  />,
       title: "Medicare Options",
-      text: "Find the right Medicare coverage for your lifestyle with flexible plan options, including Medicare Supplement plans, Prescription Drug Plans, and Medicare Advantage plans.",
+      text: "Find the right Medicare coverage for your lifestyle with flexible plan options, including Medicare Supplement Plans, Prescription Drug Plans, and Medicare Advantage Plans.",
     },
     {
       icon: <FiHeart />,
@@ -52,7 +52,7 @@ function Services() {
 
           <p className="mt-5 text-base leading-relaxed text-gray-500">
             We offer a wide range of insurance products designed to protect you,
-            your family, and your assets.
+            your assets, and your family.
           </p>
         </div>
 
