@@ -7,7 +7,8 @@ function Team() {
     {
       name: "Angela Embry",
       title: "CEO / Insurance Agent",
-      bio: "With 20+ years of experience in the industry, Angela is passionate about helping people feel confident in their coverage decisions. She specializes in matching individuals and businesses with plans that truly fit their needs, making the process simple, stress-free, and tailored to each client.",
+      bio: "Meet Angela Embry, co-founder of Double A Insurance Agency, LLC, and a veteran of the insurance industry with two decades of experience. Driven by the goal of providing truly personalized service, she teamed up with her best friend three years ago to launch their independent agency. For Angela, being an independent agent isn't just about selling policies-it's about building relationships and protecting her community.",
+      about: "As a dedicated Wife, Mom, and Mami, she understands the importance of security and peace of mind. Her clients often become friends because of her honest, hands-on approach. When she’s not matching clients with the perfect policy, you can find her spending time with her 4 children and her grandchild. ",
       email: "doubleainsurance@yahoo.com",
       phone: "(270) 202-0347",
       image: angelaImg,
@@ -15,7 +16,8 @@ function Team() {
     {
       name: "Amie Watkins",
       title: "CEO / Insurance Agent",
-      bio: "Amie brings over 10 years of experience in the insurance industry, specializing in helping clients find the right coverage to fit their unique needs. Whether working with individuals or employer groups, she is dedicated to providing personalized solutions, clear guidance, and reliable support every step of the way.",
+      bio: "With 13 years in the industry, Amie has built her career on helping families navigate the complexities of Medicare, Life, Health, Group, and Auto insurance, ensuring they feel secure and educated. Three years ago, Amie took a leap of Faith to open an independent agency with her best friend, allowing them to offer the personalized service their community deserves without the pressure of corporate quotas.",
+      about: "When Amie’s not analyzing policies or finding the best coverage, you can usually find her traveling to beach with her family, soaking up the sun and making memories with her grandkids. She brings that same care and dedication to your family as she does herself.",
       email: "doubleainsurance@yahoo.com",
       phone: "(270) 202-1101",
       image: amieImg,
@@ -59,6 +61,10 @@ function Team() {
 
                 <p className="mt-6 leading-relaxed text-gray-500">
                   {agent.bio}
+                </p>
+
+                 <p className="mt-6 leading-relaxed text-gray-500">
+                  {agent.about}
                 </p>
 
                 <div className="mt-6 space-y-3 text-gray-500">
