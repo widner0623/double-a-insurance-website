@@ -107,7 +107,7 @@ function ContactForm() {
               <FiPhone className="mt-1 text-2xl text-gray-950" />
               <div>
                 <p className="font-bold text-gray-950">Phone</p>
-                <p className="mt-2 text-gray-500">1(270) 298-8100</p>
+                <p className="mt-2 text-gray-500"><a href="tel:+12702988100">(270) 298-8100</a></p>
               </div>
             </div>
 
@@ -115,7 +115,7 @@ function ContactForm() {
               <FiMail className="mt-1 text-2xl text-gray-950" />
               <div>
                 <p className="font-bold text-gray-950">Email</p>
-                <p className="mt-2 text-gray-500">doubleainsurance@yahoo.com</p>
+                <p className="mt-2 text-gray-500"><a href="mailto:doubleainsurance@yahoo.com">doubleainsurance@yahoo.com</a></p>
               </div>
             </div>
 
