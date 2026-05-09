@@ -124,9 +124,13 @@ function ContactForm() {
               <div>
                 <p className="font-bold text-gray-950">Address</p>
                 <p className="mt-2 text-gray-500">
+                <a href="https://www.google.com/maps/place/Double+A+Insurance+Agency/@37.2246281,-86.6866438,17z/data=!3m1!4b1!4m6!3m5!1s0xac5ea6d4f997914b:0x16df6c119d6d271f!8m2!3d37.2246239!4d-86.6840689!16s%2Fg%2F11v9flsd39?entry=ttu&g_ep=EgoyMDI2MDUwNi4wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank"
+                    rel="noopener noreferrer">
                   106 S Main St,<br />
                   Morgantown, Kentucky<br />
                   42261
+                </a>
                 </p>
               </div>
             </div>
